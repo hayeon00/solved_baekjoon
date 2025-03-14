@@ -37,8 +37,8 @@ jobs:
 
     - name: Commit changes
       run: |
-        git config --global user.name 'github nickname'
-        git config --global user.email 'github email'
+        git config --global user.name 'hayeon'
+        git config --global user.email 'gimhayeon38@gmail.com'
         git diff --quiet && echo "No changes to commit" || (git add -A && git commit -m "auto upload README.md" && git push)
 
     - name: Push changes
