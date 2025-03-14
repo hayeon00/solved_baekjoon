@@ -37,10 +37,13 @@ jobs:
 
     - name: Commit changes
       run: |
-        git config --global user.name 'hayeon'
-        git config --global user.email 'gimhayeon38@gmail.com'
-        git diff --quiet && echo "No changes to commit" || (git add -A && git commit -m "auto upload README.md" && git push)
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
+        git diff --quiet && echo "No changes to commit" || (git add -A && git commit -m "auto upload README.md")
 
     - name: Push changes
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        git push
+        git push https://x-access-token:${GITHUB_TOKEN}@github.com/hayeon00/solved_baekjoon.git HEAD:main
+
