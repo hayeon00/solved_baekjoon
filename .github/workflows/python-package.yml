@@ -31,6 +31,10 @@ jobs:
     - name: Run upload.py
       run: |
         python upload.py
+
+    - name: Show README contents
+      run: cat README.md
+
     - name: Commit changes
       run: |
         git config --global user.name 'github nickname'
