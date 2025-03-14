@@ -35,8 +35,8 @@ jobs:
       run: |
         git config --global user.name 'github nickname'
         git config --global user.email 'github email'
-        git add -A
-        git commit -am "auto upload README.md"
+        git diff --quiet && echo "No changes to commit" || (git add -A && git commit -m "auto update README.md" && git push)
+
     - name: Push changes
       run: |
         git push
