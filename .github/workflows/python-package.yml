@@ -30,13 +30,13 @@ jobs:
         pip install python-leetcode
     - name: Run update.py
       run: |
-        python update.py
+        python upload.py
     - name: Commit changes
       run: |
         git config --global user.name 'github nickname'
         git config --global user.email 'github email'
         git add -A
-        git commit -am "auto update README.md"
+        git commit -am "auto upload README.md"
     - name: Push changes
       run: |
         git push
