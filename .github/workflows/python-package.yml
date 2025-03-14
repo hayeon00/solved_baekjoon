@@ -35,6 +35,10 @@ jobs:
     - name: Show README contents
       run: cat README.md
 
+    - name: Debug README contents after upload.py
+      run: cat README.md
+
+
     - name: Commit changes
       run: |
         git config --global user.name 'github-actions'
