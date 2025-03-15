@@ -34,7 +34,7 @@ jobs:
     - name: Commit changes
       run: |
         git config --global user.name 'hayeon00'
-        git config --global user.email 'rlagkdus@naver.com'
+        git config --global user.email 'gimhayeon38@gmail.com'
         git add -A
         git commit -am "auto update README.md"
     - name: Push changes
