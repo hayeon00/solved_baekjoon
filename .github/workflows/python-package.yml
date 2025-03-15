@@ -28,7 +28,9 @@ jobs:
       run: |
         python update.py
     - name: Check for changes
-      run: git status
+      run: 
+        git status
+        cat README.md
     - name: Commit changes
       run: |
         git config --global user.name 'hayeon00'
